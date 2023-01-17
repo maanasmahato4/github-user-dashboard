@@ -1,3 +1,4 @@
+import UserCard from "../components/UserCard/UserCard"
 import UserInfo from "../components/userInfo/UserInfo"
 
 function Dashboard() {
@@ -5,6 +6,7 @@ function Dashboard() {
     return (
         <div>
             <UserInfo />
+            <UserCard />
         </div>
     )
 }

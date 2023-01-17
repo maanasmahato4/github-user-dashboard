@@ -1,0 +1,17 @@
+@media (max-width:850px) {
+    .usercard-width {
+        width: 100%;
+    }
+
+}
+
+@media (min-width: 640px) {
+    .usercard-width {
+        width: 45%;
+    }
+
+}
+
+.card-width {
+    border-radius: 5px;
+}
