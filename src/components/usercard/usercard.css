@@ -5,7 +5,7 @@
 
 }
 
-@media (min-width: 640px) {
+@media (min-width: 720px) {
     .usercard-width {
         width: 45%;
     }
