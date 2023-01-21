@@ -3,7 +3,7 @@ import { useContext } from "react"
 import NavBar from "../components/navbar/NavBar"
 import Repos from "../components/repos/Repos"
 import Search from "../components/search/Search"
-import UserCard from "../components/UserCard/UserCard"
+import UserCard from "../components/usercard/UserCard"
 import UserInfo from "../components/userInfo/UserInfo"
 import { GithubContext } from "../context/context"
 
