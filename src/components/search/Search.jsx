@@ -1,4 +1,4 @@
-import { Button, Grid, TextInput, Text, Group } from '@mantine/core';
+import { Button, TextInput, Text, Group } from '@mantine/core';
 import { useState, useContext } from 'react';
 import { GithubContext } from '../../context/context';
 
