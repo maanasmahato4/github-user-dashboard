@@ -20,9 +20,7 @@ function Repos() {
             total[language] = { ...total[language], value: total[language].value + 1, stars: total[language].stars + stargazers_count, forks: total[language].forks + forks_count }
         }
         return total;
-    }, {}), githubRepos)
-
-    console.log(languages);
+    }, {}), githubRepos);
 
     //copied, i will change this code with my own in future
     const mostUsed = Object.values(languages).slice(0, 5)

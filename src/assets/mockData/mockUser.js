@@ -26,7 +26,7 @@ export default {
     location: 'mars',
     email: null,
     hireable: null,
-    bio: 'i am random person',
+    bio: 'i am a random person',
     twitter_username: 'random_twitter',
     public_repos: 152,
     public_gists: 54,
