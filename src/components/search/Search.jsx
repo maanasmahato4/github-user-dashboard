@@ -13,7 +13,7 @@ function Search() {
 
     return (
         <Group position="right" mx="md">
-            <TextInput style={{ width: "100%" }} disabled={error.show ? true : false} placeholder={'Search Github User'} onChange={(e) => setUser(e.target.value)} rightSection={requests > 0 && loading === false && <Button onClick={handleSubmit}>Search</Button>} error={searchError.show ? searchError.msg : ''} />
+            <TextInput style={{ width: "100%" }} disabled={error.show ? true : false} placeholder={'Search Github User by their username'} onChange={(e) => setUser(e.target.value)} rightSection={requests > 0 && loading === false && <Button onClick={handleSubmit}>Search</Button>} error={searchError.show ? searchError.msg : ''} />
             <Text size="md" weight={200} color="dimmed">Requests: {requests}/60</Text>
         </Group>
     )
