@@ -1,14 +1,16 @@
-import { useContext } from 'react';
+import { Group, Space } from '@mantine/core';
+import { useContext, useMemo } from 'react';
 import { GithubContext } from '../../context/context';
-import Bar3d from '../charts/Bar3d';
-import Column3d from '../charts/Column3d';
+import Bar2d from '../charts/Bar2d';
+import Column2d from '../charts/Column2d';
 import Doughnut2d from '../charts/Doughnut2d';
 import Pie3dChart from '../charts/Pie3d';
+import './repos.css';
 
 function Repos() {
     const { githubRepos } = useContext(GithubContext);
 
-    let languages = githubRepos.reduce((total, item) => {
+    let languages = useMemo(() => githubRepos.reduce((total, item) => {
         const { language, stargazers_count, forks_count } = item;
         if (!language) return total;
         if (!total[language]) {
@@ -18,7 +20,9 @@ function Repos() {
             total[language] = { ...total[language], value: total[language].value + 1, stars: total[language].stars + stargazers_count, forks: total[language].forks + forks_count }
         }
         return total;
-    }, {})
+    }, {}), githubRepos)
+
+    console.log(languages);
 
     //copied, i will change this code with my own in future
     const mostUsed = Object.values(languages).slice(0, 5)
@@ -47,12 +51,15 @@ function Repos() {
     stars = Object.values(stars).slice(-5).reverse();
     forks = Object.values(forks).slice(-5).reverse();
     return (
-        <div>
+        <Group position="center">
             <Pie3dChart data={mostUsed} />
+            <Space h="md" />
             <Doughnut2d data={mostPopular} />
-            <Column3d data={stars} />
-            <Bar3d data={forks} />
-        </div>
+            <Space h="md" />
+            <Column2d data={stars} />
+            <Space h="md" />
+            <Bar2d data={forks} />
+        </Group>
     )
 }
 

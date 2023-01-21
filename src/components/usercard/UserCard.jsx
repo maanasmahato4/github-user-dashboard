@@ -35,7 +35,7 @@ function UserCard() {
             </Card>
             <Card className='usercard-width' shadow="lg">
                 <Text size="lg" weight={600} mb="md">Followers</Text>
-                <ScrollArea style={{ height: 250 }}>
+                <ScrollArea style={{ height: "30%" }}>
                     {
                         githubFollowers.map((follower, idx) => {
                             const { login, avatar_url, html_url } = follower;

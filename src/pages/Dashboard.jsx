@@ -1,19 +1,14 @@
 import { Container, Space, Loader } from "@mantine/core"
-import { useContext, useEffect } from "react"
-import { useNavigate } from "react-router-dom"
+import { useContext } from "react"
 import NavBar from "../components/navbar/NavBar"
 import Repos from "../components/repos/Repos"
 import Search from "../components/search/Search"
 import UserCard from "../components/UserCard/UserCard"
 import UserInfo from "../components/userInfo/UserInfo"
-import { AuthContext } from "../context/authContext"
 import { GithubContext } from "../context/context"
 
 function Dashboard() {
     const { loading } = useContext(GithubContext);
-    const { isAuthenticated } = useContext(AuthContext);
-
-    const navigate = useNavigate();
 
     if (loading === true) {
         return (

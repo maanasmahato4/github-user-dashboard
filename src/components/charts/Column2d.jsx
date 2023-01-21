@@ -4,11 +4,11 @@ import Chart from "fusioncharts/fusioncharts.charts";
 import FusionTheme from "fusioncharts/themes/fusioncharts.theme.candy";
 ReactFC.fcRoot(FusionCharts, Chart, FusionTheme);
 
-const Column3d = ({ data }) => {
+const Column2d = ({ data }) => {
     const chartConfigs = {
         type: "Column2d",
-        width: "500",
-        height: "400",
+        width: "95%",
+        height: "30%",
         dataFormat: "json",
         dataSource: {
             chart: {
@@ -25,4 +25,4 @@ const Column3d = ({ data }) => {
     return <ReactFC {...chartConfigs} />;
 }
 
-export default Column3d;
+export default Column2d;
